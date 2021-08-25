@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function gameplay(){
+      let ans=prompt("請輸入name","Professor");
+      if (ans !== null) {
+        alert(`${ans}你好,請開始闖關`);
+      } else {
+        ans="小狗";
+        alert(`不想輸入就當你叫${ans},再來啊!`);
+      }
+     
+      let begin=confirm(`勇者${ans},歡迎來到冷知識測驗,準備好開始了嗎?`);
+      if (begin) {
+        alert(`欣賞你的勇氣,讓我們開始吧!`);
+        let q1=confirm(`Q1.把石頭放在微波爐中加熱不會爆炸。`);
+        if (q1==false) {
+          alert(`恭喜你答對,繼續第二題`);
+          let q2=confirm(`Q2.螃蟹的血液是藍色。`);
+          if (q2) {
+            alert(`恭喜你答對,繼續第三題`);
+            let q3=confirm(`Q3.沒有一張紙可對摺超過7次。`);
+            if (q3) {
+              alert(`恭喜你答對,繼續第四題`);
+              let q4=confirm(`Q4.人類的鼻和耳一生都在不斷長大。`);
+              if (q4) {
+                alert(`恭喜你答對,繼續第五題`);
+                let q5=confirm(`Q5.北極熊都是右撇子。`);
+                if (q5==false) {
+                  alert(`過關囉!北極熊都是左撇子啦!遊戲結束!`);
+                } else {
+                  alert(`GG司密達,進度第四關等你再來挑戰`);
+                }
+              } else {
+                alert(`GG司密達,進度第三關等你再來挑戰`);
+              }
+            } else {
+              alert(`GG司密達,進度第二關等你再來挑戰`);
+            }
+          } else {
+            alert(`GG司密達,進度第一關等你再來挑戰`);
+          }
+        } else {
+          alert(`GG司密達,第一關就失敗,等你再來挑戰`);
+        }
+      } else {
+        alert(`不玩就別浪費彼此時間!`);
+      }
+    }
+    gameplay();
+  </script>
+</body>
+</html>
